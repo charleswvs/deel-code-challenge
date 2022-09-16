@@ -1,0 +1,11 @@
+.auto-complete__item {
+  cursor: pointer;
+  padding: 4px;
+
+  border-bottom: 1px solid #eee;
+}
+
+.auto-complete__item:last-child {
+  border-bottom: none;
+
+}

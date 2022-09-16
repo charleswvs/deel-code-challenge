@@ -1,0 +1,19 @@
+.auto-complete__container {
+
+}
+
+.auto-complete__input {
+  border: 1px solid #aaa;
+  border-radius: 8px;
+  font-size: 18px;
+  padding: 4px;
+  margin-bottom: 4px;
+}
+
+.auto-complete__items-container {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #aaa;
+  font-size: 18px;
+  border-radius: 8px ;
+}
