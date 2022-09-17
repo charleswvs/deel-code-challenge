@@ -44,8 +44,6 @@ const AutoComplete = ({
     const isValueSelected = selectedItem && selectedItem?.id === selectedItemId;
 
     if (!isValueSelected) {
-      if (!inputValue.length) return;
-
       setIsFetching(true);
 
       debounceTimeoutRef.current = setTimeout(async () => {
@@ -73,7 +71,7 @@ const AutoComplete = ({
   };
 
   return (
-    <div className="auto-complete__container">
+    <div>
       <input
         onChange={handleInputChange}
         value={inputValue}
@@ -81,8 +79,8 @@ const AutoComplete = ({
         className="auto-complete__input"
       />
       {isFetching ? (
-        <div>
-          <span>loading...</span>
+        <div className="auto-complete__items-container">
+          <span className="auto-complete__loading">loading...</span>
         </div>
       ) : (
         !!results.length && (

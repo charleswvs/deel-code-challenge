@@ -3,7 +3,7 @@ import config from "./_config";
 interface User {
   createdAt: string;
   name: string;
-  id: number;
+  id: string;
 }
 
 export const fetchUsers = async (): Promise<User[]> => {

@@ -1,7 +1,3 @@
-.auto-complete__container {
-
-}
-
 .auto-complete__input {
   border: 1px solid #aaa;
   border-radius: 8px;
@@ -15,5 +11,22 @@
   flex-direction: column;
   border: 1px solid #aaa;
   font-size: 18px;
-  border-radius: 8px ;
+  border-radius: 8px;
+  max-height: 200px;
+  overflow: scroll;
+}
+
+.auto-complete__item {
+  cursor: pointer;
+  padding: 4px;
+
+  border-bottom: 1px solid #eee;
+}
+
+.auto-complete__loading {
+  padding: 4px;
+}
+
+.auto-complete__item:last-child {
+  border-bottom: none;
 }
