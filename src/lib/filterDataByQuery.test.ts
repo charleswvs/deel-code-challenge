@@ -52,6 +52,23 @@ describe("filterDataByQuery", () => {
     });
   });
 
+  test("given a data array and a query, when the query has accents, then return the match without the accent", () => {
+    const testData = [
+      { id: 1, value: "apple" },
+      { id: 2, value: "cafe" },
+    ];
+
+    const filteredData = filterDataByQuery(testData, "café");
+
+    expect(filteredData).toHaveLength(1);
+    expect(filteredData[0]).toEqual({
+      id: 2,
+      value: "cafe",
+      startMatchIndex: 0,
+      endMatchIndex: 3,
+    });
+  });
+
   test("given a data array and a query, when the query is partial match, then return all values matching the query", () => {
     const testData = [
       { id: 1, value: "apple" },
